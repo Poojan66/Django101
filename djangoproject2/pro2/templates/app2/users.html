@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Users</title>
+</head>
+<body>
+	<h1>Users</h1>
+	{% if users %}
+	<ol>
+		{% for i in users %}
+	<li>User Info</li>	
+	<ul>
+		<li>
+			fName:{{i.first_name}}
+		</li>
+		<li>
+			lName:{{i.last_name}}
+		</li>
+		<li>
+			Email:{{i.email}}
+		</li>
+	</ul>
+		{% endfor %}
+	</ol>	
+	{% endif %}
+</body>
+</html>

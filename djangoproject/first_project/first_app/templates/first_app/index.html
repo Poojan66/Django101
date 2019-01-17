@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>First App</title>
+	<link rel="stylesheet" type="text/css" href="{%static "css/style.css"%}">
+</head>
+<body>
+<h2>My Blog</h2>
+ 	<div class="django">
+		{%if records%}
+		<table>
+			<thead>
+				<th>Name</th>
+				<th>Date</th>
+				
+			</thead>
+			{% for acc in records %}
+			<tbody>
+				<tr>
+					<td>{{acc.name}}</td>
+					<td>{{acc.date}}</td>
+				</tr>
+			</tbody>
+			{% endfor %}
+		</table>
+		{%else %}
+		<p>No record found bro!</p>
+		{% endif %}
+	</div>
+<!--{{text_demo}}
+<img src="{%static "images/hello.jpg"%}" alt="didi">-->
+</body>
+</html>
